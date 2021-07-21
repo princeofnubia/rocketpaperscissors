@@ -2,17 +2,22 @@ from .absrps import AbsRPS
 from time import sleep
 
 class RockPaperScissors(AbsRPS):
-    _ROCK = 1
-    _PAPER = 2
-    _SCISSORS = 3
-    _PAPER_COVERS_ROCK = "paper covers rock"
-    _ROCK_SMASHES_SCISSORS = "rock smashes scissors"
-    _SCISSORS_CUT_PAPER = "scissors cut paper"
-    _choices = {_ROCK: 'Rock', _PAPER: 'Paper', _SCISSORS: 'Scissors'}
-    _TIE= -1
-    _ROCK_VS_SCISSORS = _ROCK
-    _ROCK_VS_PAPER = _PAPER
-    _game_rules = {
+    
+    """Concrete class for the Rock Paper Scissors class"""
+    
+    _ROCK: int = 1
+    _PAPER: int = 2
+    _SCISSORS: int = 3
+    _PAPER_COVERS_ROCK: str = "paper covers rock"
+    _ROCK_SMASHES_SCISSORS: str = "rock smashes scissors"
+    _SCISSORS_CUT_PAPER: str = "scissors cut paper"
+    _choices: dict = {_ROCK: 'Rock', _PAPER: 'Paper', _SCISSORS: 'Scissors'}
+    _TIE: int = -1
+    _ROCK_VS_SCISSORS: int = _ROCK
+    _ROCK_VS_PAPER: int = _PAPER
+
+    # make use of matrix to determine winner or loser on pairing
+    _game_rules: dict = {
         _ROCK: {_ROCK: _TIE, _SCISSORS: _ROCK, _PAPER: _PAPER},
         _SCISSORS: {_ROCK: _ROCK, _SCISSORS: _TIE, _PAPER:_SCISSORS},
         _PAPER: {_ROCK: _PAPER, _SCISSORS: _SCISSORS, _PAPER: _TIE}
@@ -23,6 +28,7 @@ class RockPaperScissors(AbsRPS):
         self._score = {player: 0, opponent: 0}
         self._game_stat = {}
     
+    #Give the players choice and get the winner from the rule matrix
     def play(self):
         try:
             player = self._player

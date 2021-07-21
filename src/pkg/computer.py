@@ -2,7 +2,7 @@ import random
 from .absplayer import Player
 
 class Computer(Player):
-
+    """Concrete computer player"""
     def __init__(self, name='Computer', score=0):
         self._name = name
         self._score = score

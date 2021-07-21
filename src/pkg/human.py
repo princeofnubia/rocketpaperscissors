@@ -1,6 +1,7 @@
 from .absplayer import Player
 
 class Human(Player):
+    """Concrete human player class"""
     def __init__(self, name='You', score=0):
         self._name = name
         self._score = score

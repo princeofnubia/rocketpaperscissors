@@ -6,7 +6,7 @@ from .rockpaperscissors import RockPaperScissors
 from .lizardspock import LizardSpock
 
 class Engine:
-
+    """Game Engine class. Bootstrapping, running and managing game components"""
 
     # Game Context
     _COMPUTER_VERSUS_HUMAN: int = 1
@@ -47,11 +47,9 @@ class Engine:
 
     def _start_game_computer_vs_human(self):
         clear()
-        print(self._game_variant)
         self._game_header("ENTER YOUR MOVE {}".format(self._player_name))
         game = RockPaperScissors(player = self._human_player, opponent= self._computer)
         if (self._game_variant == LizardSpock):
-            print(self._game_variant)
             game = LizardSpock(game)
         self.game_loop(game)
 

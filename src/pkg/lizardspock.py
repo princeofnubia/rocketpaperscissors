@@ -1,5 +1,8 @@
 from .absrpsdecorator import AbsRPSDecorator
 class LizardSpock(AbsRPSDecorator):
+    """Lizard Spock Decorator Class to extend Rock Paper Scissor Game"""
+    """Just provide the game rules and choices and the Extending class will handle the remaining logic"""
+    """I had to rewrite the constants for readability """
     _ROCK = 1
     _PAPER = 2
     _SCISSORS = 3

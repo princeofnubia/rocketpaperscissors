@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
-
-class AbsRPSDecorator(metaclass = ABCMeta):
-    
+from .absrps import AbsRPS
+class AbsRPSDecorator(AbsRPS):
+    """Abstract Decorator implementing The Abstract RockPaperLizard Interface"""
     _choices: dict = {}
     _game_rules: dict = {}
     

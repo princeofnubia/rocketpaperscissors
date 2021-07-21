@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 
 class AbsRPS(metaclass = ABCMeta):
-    
+    """Rock Paper Scissors Interface implemented by RockPaperScissor concrete interface as well as its Decorators"""
 
     _choices: dict = {}
     _game_rules: dict = {}
