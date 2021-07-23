@@ -8,4 +8,4 @@ Instruction
 3. execute venv/Scripts/activate to switched to the virtual env
 4. pip install pytest to install pytest testing framework
 5. pytest to run the test
-6. python src to run app
+6. <code> python src </code> to run app
