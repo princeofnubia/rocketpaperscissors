@@ -65,6 +65,7 @@ class Engine:
             clear()
             game = RockPaperScissors(player= computer1, opponent=computer2)
             if (self._game_variant == LizardSpock):
+                print(9)
                 game = LizardSpock(game)
             self.game_loop(game)
     def _replay_game(self):
