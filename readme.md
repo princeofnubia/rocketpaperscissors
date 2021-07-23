@@ -1,6 +1,11 @@
 
 Coding assignment from Human Mavericks
 
+Design Approach
+
+Implemented The Rock-Paper-Scissors game functionality
+Implmented The Rock-Paper-Scissors-Lizard-Spock as an extended functionality
+
 Instruction
 
 1. Ensure that you have python 3.7 or later installed on your system and setup the environment variable
@@ -9,3 +14,5 @@ Instruction
 4. <code> pip install pytest </code> to install pytest testing framework
 5. <code> pytest </code> to run the test
 6. <code> python src </code> to run app
+
+
