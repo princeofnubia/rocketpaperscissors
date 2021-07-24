@@ -1,4 +1,5 @@
 from src.pkg.human import Human
+from src.pkg.absplayer import Player
 from unittest import TestCase
 from unittest.mock import MagicMock
 from .test_stud_base import get_display_output, set_keyboard_input
@@ -8,10 +9,6 @@ import pytest
 
 class HumanTest(TestCase):
 
-    def choice_from_input(self):
-        inputs = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-        selection = random.randint(1, len(inputs))
-        return selection
     
     def test_choice_must_be_correct(self):
         set_keyboard_input(['1'])
@@ -34,3 +31,21 @@ class HumanTest(TestCase):
     def test_should_be_provide_given_name(self):
         human = Human('Chan')
         self.assertTrue(human.getName() == 'Chan')
+
+    def test_should_produce_exact_score(self):
+        player = Human('Ade')
+        self.assertTrue(player.getScore() == 0)
+        self.assertTrue(player.setScore(1) == None)
+        self.assertTrue(player.getScore() == 1)
+
+    def test_should_produce_increment_score(self):
+        player = Human('Seun')
+        self.assertTrue(player.getScore() == 0)
+        self.assertTrue(player.setScore(4) == None)
+        self.assertTrue(player.getScore() == 4)
+        self.assertTrue(player.setScore(4) == None)
+        self.assertTrue(player.getScore() == 8) 
+
+    def test_should_be_player(self):
+        player = Human('Seun')
+        self.assertTrue(isinstance(player, Player))

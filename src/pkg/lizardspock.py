@@ -27,11 +27,5 @@ class LizardSpock(AbsRPSDecorator):
     def play(self):
         return self.decorated_rps.play()
 
-    def restart(self):
-        return self.decorated_rps.restart()
-
     def game_stat(self):
         return self.decorated_rps.game_stat()
-    
-    def instruction(self):
-        return self.decorated_rps.instruction()
